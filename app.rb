@@ -9,6 +9,8 @@ set :database, "sqlite3:barbershop.db" #подключение к базе да�
 class Client < ActiveRecord::Base #создание сущности(объекта, искользуемого в БД)
 end
 
+class Barber < ActiveRecord::Base
+end
 
 get '/' do
 	erb "hi"

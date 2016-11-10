@@ -13,5 +13,6 @@ class Barber < ActiveRecord::Base
 end
 
 get '/' do
-	erb "hi"
+	@barbers = Barber.all
+	erb :index
 end

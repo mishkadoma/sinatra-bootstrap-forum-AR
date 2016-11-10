@@ -2,7 +2,14 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'sinatra/activerecord'
+
+set :database, "sqlite3:barbershop.db" #подключение к базе данных(ЗАПОМНИТЬ!!!!)
+
+class Client < ActiveRecord::Base #создание сущности(объекта, искользуемого в БД)
+end
+
 
 get '/' do
-	erb "hi"			
+	erb "hi"
 end
